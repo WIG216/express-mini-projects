@@ -7,7 +7,6 @@ router.get('/', taskCtrl.apiGetAllTasks);
 router.post('/', taskCtrl.apiCreateTask);
 router.get('/:id', taskCtrl.apiGetTask);
 router.patch('/:id', taskCtrl.apiUpdateTask);
-router.put('/:id', taskCtrl.apiEditTask);
 router.delete('/:id', taskCtrl.apiDeleteTask);
 
 // alternate way of using routes

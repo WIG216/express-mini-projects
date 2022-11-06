@@ -50,20 +50,6 @@ module.exports = class taskService{
         }
     }
 
-    static async editTask(taskID, data){
-        try {
-            const updateTask = {
-                name: data.name,
-                completed: data.completed
-            }
-            const response = await Task.findOneAndUpdate({_id: taskID}, updateTask, {new:true,runValidators:true})
-
-            return response
-        } catch (error) {
-            console.log(error)
-        }
-    }
-
     static async deleteTask(taskID){
         try {
             const response = await Task.findOneAndDelete({_id: taskID})
